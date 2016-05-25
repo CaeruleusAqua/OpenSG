@@ -68,4 +68,4 @@ matrix:
 script:
   - mkdir build
   - cd build
-  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DOSG_ENABLE_C++11=ON -DOSGBUILD_OSGContribCgFX=OFF .. && make
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DOSG_ENABLE_C++11=ON -DOSGBUILD_OSGContribCgFX=OFF .. && make -j4
