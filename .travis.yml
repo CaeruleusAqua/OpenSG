@@ -16,6 +16,8 @@ matrix:
             - libboost-python-dev
             - libboost-filesystem-dev
             - freeglut3-dev
+            - libxmu-dev
+            - libxi-dev
       env: COMPILER=g++-4.9
     - compiler: gcc
       addons:
@@ -28,6 +30,8 @@ matrix:
             - libboost-python-dev
             - libboost-filesystem-dev
             - freeglut3-dev
+            - libxmu-dev
+            - libxi-dev
       env: COMPILER=g++-5
     - compiler: clang
       addons:
@@ -41,6 +45,8 @@ matrix:
             - libboost-python-dev
             - libboost-filesystem-dev
             - freeglut3-dev
+            - libxmu-dev
+            - libxi-dev
       env: COMPILER=clang++-3.6
     - compiler: clang
       addons:
@@ -54,6 +60,8 @@ matrix:
             - libboost-python-dev
             - libboost-filesystem-dev
             - freeglut3-dev
+            - libxmu-dev
+            - libxi-dev
       env: COMPILER=clang++-3.7
   
 # Build steps
