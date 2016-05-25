@@ -19,6 +19,9 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-4.9
+            - libboost-system-dev
+            - libboost-python-dev
+            - freeglut3-dev
       env: COMPILER=g++-4.9
     - compiler: gcc
       addons:
@@ -27,6 +30,9 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-5
+            - libboost-system-dev
+            - libboost-python-dev
+            - freeglut3-dev
       env: COMPILER=g++-5
     - compiler: clang
       addons:
@@ -36,6 +42,9 @@ matrix:
             - llvm-toolchain-precise-3.6
           packages:
             - clang-3.6
+            - libboost-system-dev
+            - libboost-python-dev
+            - freeglut3-dev
       env: COMPILER=clang++-3.6
     - compiler: clang
       addons:
@@ -45,10 +54,13 @@ matrix:
             - llvm-toolchain-precise-3.7
           packages:
             - clang-3.7
+            - libboost-system-dev
+            - libboost-python-dev
+            - freeglut3-dev
       env: COMPILER=clang++-3.7
   
 # Build steps
 script:
   - mkdir build
   - cd build
-  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DOSG_ENABLE_C++11=ON .. && make
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DOSG_ENABLE_C++11=ON -DOSGBUILD_OSGContribCgFX=OFF .. && make
